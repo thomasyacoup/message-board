@@ -1,4 +1,4 @@
-const NotFounError = require("../errors/NotFoundError");
+const NotFoundError = require("../errors/NotFoundError");
 const Message = require("../models/messageModel");
 
 const getAllMessages = async (req, res, next) => {
@@ -26,7 +26,7 @@ const getOneMessage = async (req, res) => {
   const id = req.params.id;
   const myMessage = await Message.getById(id);
   if (!myMessage) {
-    throw new NotFounError("Message Not Found");
+    throw new NotFoundError("Message Not Found");
   }
   res.render("message", { message: myMessage });
 };
