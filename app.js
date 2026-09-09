@@ -9,7 +9,7 @@ const {
 } = require("./controllers/messageController");
 
 require("dotenv").config();
-const PORT = require("process").env.PORT;
+const PORT = require("process").env.PORT || 8080;
 
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
