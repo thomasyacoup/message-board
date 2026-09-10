@@ -1,4 +1,4 @@
-class NotFounError extends Error {
+class NotFoundError extends Error {
   constructor(message) {
     super(message);
     this.status = 404;
@@ -6,4 +6,4 @@ class NotFounError extends Error {
   }
 }
 
-module.exports = NotFounError;
+module.exports = NotFoundError;
