@@ -20,7 +20,7 @@ class MessageModel {
   getAll = async () => this.#messages;
   
   getById = async (id) => {
-    this.#messages.find((item) => item.id === id);
+    const message = this.#messages.find((item) => item.id === id);
     if (!message) throw new NotFoundError("There's no message with this id.")
     return message;
   }
